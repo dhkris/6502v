@@ -247,6 +247,13 @@ int main(int argc, char* argv[]) {
     
    m6502* mach_instance = create_machine();
    vm_state* vm = create_vm_state(argc,argv);
+   
+   #ifdef __i386___
+      fprintf(stderr,"Built for x86-32 (little endian)\n");
+   #endif
+   #ifdef __x86_64__
+      fprintf(stderr,"Built for x86-64 (little endian)\n");   
+   #endif
    fputc('\n',stderr);
 
    #ifndef INTERNAL_TEST
