@@ -11,6 +11,7 @@ m6502* create_machine() {
    my_mach->acc = 0x00;
    my_mach->ix = 0x00;
    my_mach->iy = 0x00;
+   my_mach->stack_ptr = 0;   
    memset(my_mach->stack, 16, 1);
    memset(my_mach->memory, 8192*8, 1);
    my_mach->pc = 0x0000;

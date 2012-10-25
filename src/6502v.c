@@ -41,6 +41,36 @@ word xqt( m6502* m, byte* j, word X ) {
       m->acc = new_a_value;
       Y++;
    }
+   else if( CI == op_LDA_abs ) {
+      Y++;
+      word addr = ADDRGEN(j[Y],j[++Y]);
+      #ifdef DEBUG
+      fprintf(stderr, "$%0.4x |  LDA:absolute <-- (byteAt: %0.4x (=%0.2x))\n", 
+              CADD, addr, m->memory[addr]);
+      #endif      
+      m->acc = m->memory[addr];
+      Y++;
+   }
+   else if( CI == op_LDA_abx ) {
+      Y++;
+      word addr = (ADDRGEN(j[Y],j[++Y])) + m->ix;
+      #ifdef DEBUG
+      fprintf(stderr, "$%0.4x |  LDA:absolute+x <-- (byteAt: %0.4x (=%0.2x))\n", 
+              CADD, addr, m->memory[addr]);
+      #endif      
+      m->acc = m->memory[addr];
+      Y++;
+   }   
+   else if( CI == op_LDA_idx ) {
+      Y++;
+      word addr = m->memory[(word)(ADDRGEN(j[Y],j[++Y]))+m->ix];
+      #ifdef DEBUG
+      fprintf(stderr, "$%0.4x |  LDA:indirect+x <-- (byteAt: %0.4x (=%0.2x))\n", 
+              CADD, addr, m->memory[addr]);
+      #endif      
+      m->acc = m->memory[addr];
+      Y++;
+   }      
    else if( CI == op_STA_abs ) {
       Y++;
       word addr = ADDRGEN( j[CO], j[X+(++Y)]);
@@ -51,6 +81,16 @@ word xqt( m6502* m, byte* j, word X ) {
       MEM(addr) = m->acc;
       ++Y;
    }
+   else if( CI == op_STX_abs ) {
+      Y++;
+      word addr = ADDRGEN( j[CO], j[X+(++Y)]);
+      #ifdef DEBUG
+      fprintf(stderr, "$%0.4x |  STX:absolute --> $%4x\n", CADD, addr);      
+      #endif
+      if(addr == OUTCHAR_ADDR) m->OUTFLAG=ON;
+      MEM(addr) = m->ix;
+      ++Y;
+   }   
    else if( CI == op_CMP_imm ) {
       Y++;
       byte cmp_byte = j[CO];
