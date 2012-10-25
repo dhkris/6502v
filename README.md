@@ -1,5 +1,4 @@
-6502v
-=====
+<img src="https://raw.github.com/dhkris/6502v/master/.rsrc/6502v.png">
 
 A lightning fast MOS6502 virtual machine!
 
