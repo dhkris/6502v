@@ -1,0 +1,58 @@
+LICENSE TERMS OF THE ENTIRETY OF 6502V.
+
+!!SPECIAL NOTICE!!
+THE basic license of 6502V and its source code is the 4-clause ("classic" or
+"original") BSD license. This means that, apart from the usual BSD license 
+clauses, you must also acknowledge in any material advertising features of
+a derivative product that said derivative contains source developed by me
+and my contributors.
+
+THIS, however, is for negotiation if I find that you, upon contacting me and
+describing and/or showing your derivative product to me, have deserved a more
+lenient license. In that case, I will exclusively license 6502V to you under
+the terms of a non-advertising open source license of our common choice --
+usually the 2/3-clause BSD or MIT license.
+
+
+I SHAN'T license this or any other piece of my "intellectual
+property" under the GPL (and GPL-like) family of licenses. I find that the GPL
+restricts both my - and your (as a user and possible derivative product developer) -
+freedom to an intolerable degree, and that the licenses are grounded in
+failed ideological thinking, enforcing rigid rules just like the proprietary
+software, the authors of the license are so exceedingly bellicose against.
+
+If you desire to seek exclusive licensing of this product, contact me:
+   
+           GITHUB                            E-MAIL
+   http://github.com/dhkris/     davidhkristensen@outlook.com
+
+!!!
+---
+
+Copyright (c) 2012, DAVID HANEFELT KRISTENSEN of LYNXMEDIA s.m.b.a.
+All rights reserved.
+  
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in the
+ documentation and/or other materials provided with the distribution.
+3. All advertising materials mentioning features or use of this software
+ must display the following acknowledgement:
+ This product includes software developed by LYNXMEDIA s.m.b.a
+4. Neither the name of LYNXMedia s.m.b.a. nor the
+ names of its contributors may be used to endorse or promote products
+ derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY <COPYRIGHT HOLDER> ''AS IS'' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
