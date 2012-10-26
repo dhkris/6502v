@@ -103,6 +103,19 @@
 // DEX; *x--;
 #define op_DEX       0xCA
 
+// DEY
+#define op_DEY		 0x88
+
+// EOR: a = a ^ b;
+#define op_EOR_imm	 0x49
+#define op_EOR_zpm	 0x45
+#define op_EOR_zpx	 0x55
+#define op_EOR_abs	 0x4D
+#define op_EOR_abx	 0x5D
+#define op_EOR_aby   0x59
+#define op_EOR_inx	 0x41
+#define op_EOR_iny	 0x51
+
 // INC: *mem++;
 #define op_INC_zpm   0xE6
 #define op_INC_zpx   0xF6
@@ -112,6 +125,8 @@
 // INX: *x++;
 #define op_INX       0xE8
 
+// INY
+#define op_INY		 0xC8
 
 // JMP
 #define op_JMP_abs   0x4C
@@ -136,26 +151,96 @@
 #define op_LDX_abs   0xAE
 #define op_LDX_aby   0xBE
 
+// LSR
+// logical shift right
+#define op_LSR_acc	 0x4A
+#define op_LSR_zpm   0x46
+#define op_LSR_zpx   0x56
+#define op_LSR_abs   0x4E
+#define op_LSR_abx   0x5E
+
 // NOP
 #define op_NOP       0xEA
+
+// ORA
+// bitwise OR with A
+#define op_ORA_imm   0x09
+#define op_ORA_zpm   0x05
+#define op_ORA_zpx   0x15
+#define op_ORA_abs   0x0D
+#define op_ORA_abx   0x1D
+#define op_ORA_aby   0x19
+#define op_ORA_inx   0x01
+#define op_ORA_iny   0x11
 
 // STACK OPERATIONS (ACC->STK->ACC)
 #define op_PHA       0x48
 #define op_PLA       0x68
+#define op_TXS		 0x9A
+#define op_TSX       0xBA
+#define op_PHP       0x08
+#define op_PLP       0x28
 
-// STORE OPERATIONS
+// ROL
+// rotate left
+#define op_ROL_acc   0x2A
+#define op_ROL_zpm   0x26
+#define op_ROL_zpx   0x36
+#define op_ROL_abs   0x2E
+#define op_ROL_abx   0x3E
+
+// ROR
+// rotate right
+#define op_ROR_acc   0x6A
+#define op_ROR_zpm   0x66
+#define op_ROR_zpx   0x76
+#define op_ROR_abs   0x6E
+#define op_ROR_abx   0x7E
+
+// RTI
+// return from interrupt
+#define op_RTI		 0x40
+
+// RTS
+// return from subroutine
+#define op_RTS		 0x60
+
+// SBC
+// subtract with carry
+#define op_SBC_imm	 0xE9
+#define op_SBC_zpm	 0xE5
+#define op_SBC_zpx   0xF5
+#define op_SBC_abs   0xED
+#define op_SBC_abx   0xFD
+#define op_SBC_aby   0xF9
+#define op_SBC_inx   0xE1
+#define op_SBC_iny   0xF1
+
+// STA
+// store acc.
 #define op_STA_zpm   0x85
 #define op_STA_zpx   0x95
 #define op_STA_abs   0x8d
 #define op_STA_abx   0x9d
 #define op_STA_idx   0x81
 #define op_STA_idy   0x91
+
+// STX
+// store X
 #define op_STX_zpm   0x86
 #define op_STX_zpy   0x96
 #define op_STX_abs   0x8E
 
+// STY
+// store Y
+#define op_STY_zpm   0x84
+#define op_STY_zpx   0x94
+#define op_STY_abs   0x8C
+
 // TRANSFER
 #define op_TAX       0xAA
+#define op_TAY       0xA8
 #define op_TXA       0x8A
+#define op_TYA       0x98
 
 #endif
